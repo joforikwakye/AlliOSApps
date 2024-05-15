@@ -1,0 +1,53 @@
+//
+//  Currency.swift
+//  LOTRConverter
+//
+//  Created by Jeffrey Kwakye on 13/05/2024.
+//
+
+import SwiftUI
+
+//converting our enum to a collection to be able to loop through
+//Identifiable is a way of uniquely identifying each of the cases we have specified in our enum
+enum Currency: Double, CaseIterable, Identifiable{
+    
+    case copperPenny = 6400
+    case silverPenny = 64
+    case silverPiece = 16
+    case goldPenny = 4
+    case goldPiece = 1
+    
+    var id: Currency {self}
+    
+    var image: ImageResource {
+        switch self {
+        case .copperPenny:
+                .copperpenny
+        case .silverPenny:
+                .silverpenny
+        case .silverPiece:
+                .silverpiece
+        case .goldPenny:
+                .goldpenny
+        case .goldPiece:
+                .goldpiece
+        }
+    }
+    
+    var name: String {
+        switch self {
+        case .copperPenny:
+            "Copper Penny"
+        case .silverPenny:
+            "Silver Penny"
+        case .silverPiece:
+            "Silver Piece"
+        case .goldPenny:
+            "Gold Pennny"
+        case .goldPiece:
+            "Gold Piece"
+        }
+    }
+    
+   
+}
