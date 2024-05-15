@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct CurrencyIcon: View {
+    
+    let currencyImage: ImageResource
+    let currencyText: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .bottom) {
+            Image(currencyImage)
+                .resizable()
+                .scaledToFit()
+            
+            Text(currencyText)
+                .padding(3)
+                .font(.caption)
+                .frame(maxWidth: .infinity)
+                .background(.brown.opacity(0.75))
+        }
+        .background(.brown)
+        .frame(width: 100, height: 100)
+        .clipShape(.rect(cornerRadius: 25))
     }
 }
 
 #Preview {
-    CurrencyIcon()
+    CurrencyIcon(currencyImage: .copperpenny, currencyText: "something")
 }
