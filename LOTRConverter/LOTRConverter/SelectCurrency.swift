@@ -10,7 +10,8 @@ import SwiftUI
 struct SelectCurrency: View {
     
     @Environment(\.dismiss) var dismiss
-    @State var selectedCurrency: Currency
+    @Binding var topCurrency: Currency
+    @Binding var bottomCurrency: Currency
     
     var body: some View {
         ZStack {
@@ -23,32 +24,13 @@ struct SelectCurrency: View {
                     .fontWeight(.bold)
                 
                 
-                
-                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                    
-                    ForEach(Currency.allCases) { currency in
-                        if selectedCurrency == currency {
-                            
-                            CurrencyIcon(currencyImage: currency.image, currencyText: currency.name)
-                                .shadow(color:.black, radius: 10)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .stroke(lineWidth: 3)
-                                        .opacity(0.5)
-                                }
-                        } else {
-                            CurrencyIcon(currencyImage: currency.image, currencyText: currency.name)
-                                .onTapGesture {
-                                    selectedCurrency = currency
-                                }
-                        }
-                        
-                    }
-                }
+                IconGrid(selectedCurrency: $topCurrency)
+               
                 
                 Text("Select the currency you would like to convert to:")
                     .fontWeight(.bold)
                     
+                IconGrid(selectedCurrency: $bottomCurrency)
                    
 
                 
@@ -65,10 +47,11 @@ struct SelectCurrency: View {
             .padding()
             .multilineTextAlignment(.center)
         }
+     
     }
 }
 
 #Preview {
-    SelectCurrency(selectedCurrency: .goldPenny)
+    SelectCurrency(topCurrency: .constant(.goldPenny), bottomCurrency: .constant(.silverPenny))
 }
 
