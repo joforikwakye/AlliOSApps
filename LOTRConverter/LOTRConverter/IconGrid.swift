@@ -27,7 +27,7 @@ struct IconGrid: View {
                     CurrencyIcon(currencyImage: currency.image, currencyText: currency.name)
                         .onTapGesture {
                             selectedCurrency = currency
-                            print("currency: \(selectedCurrency)")
+//                            print("currency: \(selectedCurrency)")
                         }
                 }
                 
