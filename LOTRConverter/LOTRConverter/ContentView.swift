@@ -118,6 +118,7 @@ struct ContentView: View {
         }
         .onChange(of: leftAmount) {
             if leftTyping {
+                print(leftAmount)
                 rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
             }
         }
