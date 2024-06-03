@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22080C882C04B64700DD1857 /* PredatorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080C872C04B64700DD1857 /* PredatorDetail.swift */; };
 		2233B9FF2C07D216002C47EB /* PredatorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233B9FE2C07D216002C47EB /* PredatorMap.swift */; };
+		224E15672C08B1610069D3D5 /* PredatorMapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E15662C08B1610069D3D5 /* PredatorMapInfo.swift */; };
 		2254CF4C2BFE82EF00012D48 /* JPApexPredatorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254CF4B2BFE82EF00012D48 /* JPApexPredatorsApp.swift */; };
 		2254CF4E2BFE82EF00012D48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254CF4D2BFE82EF00012D48 /* ContentView.swift */; };
 		2254CF502BFE82F100012D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2254CF4F2BFE82F100012D48 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		22080C872C04B64700DD1857 /* PredatorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetail.swift; sourceTree = "<group>"; };
 		2233B9FE2C07D216002C47EB /* PredatorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorMap.swift; sourceTree = "<group>"; };
+		224E15662C08B1610069D3D5 /* PredatorMapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorMapInfo.swift; sourceTree = "<group>"; };
 		2254CF482BFE82EF00012D48 /* JPApexPredators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPApexPredators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254CF4B2BFE82EF00012D48 /* JPApexPredatorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPApexPredatorsApp.swift; sourceTree = "<group>"; };
 		2254CF4D2BFE82EF00012D48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				2254CF4D2BFE82EF00012D48 /* ContentView.swift */,
 				22080C872C04B64700DD1857 /* PredatorDetail.swift */,
 				2233B9FE2C07D216002C47EB /* PredatorMap.swift */,
+				224E15662C08B1610069D3D5 /* PredatorMapInfo.swift */,
 				2254CF5B2BFE8B0500012D48 /* ApexPredator.swift */,
 				2254CF5D2BFE99D600012D48 /* Predators.swift */,
 				2254CF592BFE843C00012D48 /* jpapexpredators.json */,
@@ -155,6 +158,7 @@
 			files = (
 				2254CF5C2BFE8B0500012D48 /* ApexPredator.swift in Sources */,
 				2233B9FF2C07D216002C47EB /* PredatorMap.swift in Sources */,
+				224E15672C08B1610069D3D5 /* PredatorMapInfo.swift in Sources */,
 				2254CF4E2BFE82EF00012D48 /* ContentView.swift in Sources */,
 				22080C882C04B64700DD1857 /* PredatorDetail.swift in Sources */,
 				2254CF5E2BFE99D600012D48 /* Predators.swift in Sources */,

@@ -28,25 +28,26 @@ struct PredatorDetail: View {
                                 Gradient.Stop(color: .clear, location: 0.8),
                                 Gradient.Stop(color: .black, location: 1)
                                 
-                                ]
-                            , startPoint: .top, endPoint: .bottom)
+                            ]
+                                           , startPoint: .top, endPoint: .bottom)
                         }
                     
-                    Image(predator.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: geo.size.width/1.5, height: geo.size.height/3)
-                        .shadow(color: .black, radius: 7)
-                        .scaleEffect(x: -1)
-                        .offset(y: 20)
-                    
-                        
+                
+                        Image(predator.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geo.size.width/1.5, height: geo.size.height/3)
+                            .shadow(color: .black, radius: 7)
+                            .scaleEffect(x: -1)
+                            .offset(y: 20)
+                            
                 }
                 
                 VStack(alignment: .leading){
                     
                     Text(predator.name)
                         .font(.largeTitle)
+
                     
                     
                     NavigationLink {

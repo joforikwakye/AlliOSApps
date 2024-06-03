@@ -75,6 +75,7 @@ struct ContentView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 30)
+                                
 
                         }
                        

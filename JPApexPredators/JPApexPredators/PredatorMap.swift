@@ -12,12 +12,13 @@ struct PredatorMap: View {
     
     @State var position: MapCameraPosition
     @State var satellite = false
+    @State var showPredatorInfoOnMap = false
     
     let predators = Predators()
     
     var body: some View {
         Map(position: $position) {
-            ForEach(predators.apexPredators) {predator in
+            ForEach(predators.apexPredators) { predator in
                 Annotation(predator.name, coordinate: predator.location) {
                     Image(predator.image)
                         .resizable()
@@ -25,10 +26,28 @@ struct PredatorMap: View {
                         .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                         .shadow(color: .white, radius: 3)
                         .scaleEffect(x: -1)
+                        .onTapGesture {
+                            showPredatorInfoOnMap.toggle()
+                        }
                 }
+                
+//                Annotation(predator.name, coordinate: predator.location) {
+//                    if showPredatorInfoOnMap {
+//                        VStack {
+//                            Text("ye")
+//                        }
+//                        .background(.black.opacity(0.5))
+//                        .padding()
+//                    }
+//                   
+//                }
+                
+                
             }
-            
+            .annotationTitles(.hidden)
+             
         }
+        
         .mapStyle(satellite ? .imagery(elevation: .realistic) : .standard(elevation: .realistic))
         .overlay(alignment: .bottomTrailing) {
             Button {
@@ -44,6 +63,8 @@ struct PredatorMap: View {
                     .padding()
             }
         }
+        
+        
         .toolbarBackground(.automatic)
     }
 }
